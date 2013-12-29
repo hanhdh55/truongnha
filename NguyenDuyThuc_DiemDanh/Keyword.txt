@@ -1,0 +1,117 @@
+*** Setting ***
+Library				Selenium2Library
+
+
+*** Variables ***
+${LOGIN ADDRESS}			http://truongnha.com/login/
+${BROWSER}				ff
+${HOST}					http://truongnha.com
+${WELCOME PAGE}			${HOST}/school/
+${CLASSES PAGE}			${HOST}/school/classes
+${ADD CLASSES PAGE}		${HOST}/school/addclass
+${VIEW DETAIL}			${HOST}/school/viewClassDetail/1434
+${ROLLUP}			${HOST}/school/diemdanh/1434
+
+
+*** Keywords ***
+Open Login Page
+	Open Browser  ${LOGIN ADDRESS}  ${BROWSER}
+	Maximize Browser Window
+	
+Input Username  [Arguments]  ${username}
+    Input Text  id_username  ${username}
+
+Input Password  [Arguments]  ${password}
+    Input Text  id_password  ${password}
+
+Submit Login
+	Click Button  login
+	
+Login is Successful
+	Location Should Be 	${WELCOME PAGE}
+
+Login
+	Open Browser  ${LOGIN ADDRESS}  ${BROWSER}
+	Maximize Browser Window
+	Input Text  id_username	mokey.d.luffy
+	Input Text  id_password	@urmant969
+	Click Button  login
+	Location Should Be 	${WELCOME PAGE}
+
+
+Go To Home Page
+	Go To 	${WELCOME PAGE}
+
+Select Classes Teachers
+	Click Link 	classes-teachers
+	Location Should Be	${CLASSES PAGE}
+
+Select An Class
+	Click Link	/school/viewClassDetail/1434
+	Location Should Be 	${VIEW DETAIL}
+
+Select Rollup
+	Click Link	/school/diemdanh/1434
+
+	
+Select lop10B
+	Click Element	id=1435
+
+
+
+
+Enter Rollup1	[Arguments]		${typeOfRollup}		${expect}
+	Input Text	xpath=//tr[1]/td[contains(@class,'col1')]/input	${typeOfRollup}
+	${testValue}=	Get Value	xpath=//tr[1]/td[contains(@class,'col1')]/input
+	Should Be Equal		${testValue}	${expect}
+	
+
+Enter Rollup2	[Arguments]		${typeOfRollup}		${expect}
+	Input Text	xpath=//tr[1]/td[contains(@class,'col2')]/input	${typeOfRollup}
+	${testValue}=	Get Value	xpath=//tr[1]/td[contains(@class,'col2')]/input
+	Should Be Equal		${testValue}	${expect}
+
+Enter Rollup3	[Arguments]		${typeOfRollup}		${expect}
+	Input Text	xpath=//tr[1]/td[contains(@class,'col3')]/input	${typeOfRollup}
+	${testValue}=	Get Value	xpath=//tr[1]/td[contains(@class,'col3')]/input
+	Should Be Equal		${testValue}	${expect}
+
+Enter Rollup4	[Arguments]		${typeOfRollup}		${expect}
+	Input Text	xpath=//tr[1]/td[contains(@class,'col4')]/input	${typeOfRollup}
+	${testValue}=	Get Value	xpath=//tr[1]/td[contains(@class,'col4')]/input
+	Should Be Equal		${testValue}	${expect}
+
+	
+Enter Rollup5	[Arguments]		${typeOfRollup}		${expect}
+	Input Text	xpath=//tr[1]/td[contains(@class,'col5')]/input	${typeOfRollup}
+	${testValue}=	Get Value	xpath=//tr[1]/td[contains(@class,'col5')]/input
+	Should Be Equal		${testValue}	${expect}
+
+Enter Rollup6	[Arguments]		${typeOfRollup}	${expect}
+	Input Text	xpath=//tr[2]/td[contains(@class,'col1')]/input	${typeOfRollup}
+	${testValue}=	Get Value	xpath=//tr[2]/td[contains(@class,'col1')]/input
+	Should Be Equal		${testValue}	${expect}
+
+Enter Rollup7	[Arguments]		${typeOfRollup}		${expect}
+	Input Text	xpath=//tr[2]/td[contains(@class,'col2')]/input	${typeOfRollup}
+	${testValue}=	Get Value	xpath=//tr[2]/td[contains(@class,'col2')]/input
+	Should Be Equal		${testValue}	${expect}
+
+Enter Rollup8	[Arguments]		${typeOfRollup}		${expect}
+	Input Text	xpath=//tr[2]/td[contains(@class,'col3')]/input	${typeOfRollup}
+	${testValue}=	Get Value	xpath=//tr[2]/td[contains(@class,'col3')]/input
+	Should Be Equal		${testValue}	${expect}
+
+Enter Rollup9	[Arguments]		${typeOfRollup}		${expect}
+	Input Text	xpath=//tr[2]/td[contains(@class,'col4')]/input	${typeOfRollup}
+	${testValue}=	Get Value	xpath=//tr[2]/td[contains(@class,'col4')]/input
+	Should Be Equal		${testValue}	${expect}
+
+
+Enter Rollup	[Arguments]		${typeOfRollup}		${expect}
+	Input Text	xpath=//tr[2]/td[contains(@class,'col4')]/input	${typeOfRollup}
+	Press Key	xpath=//tr[2]/td[contains(@class,'col4')]/input	\\10
+	${testValue}=	Get Value	xpath=//tr[2]/td[contains(@class,'col4')]/input
+	Should Be Equal		${testValue}	${expect}
+Exit
+	Close Browser

@@ -1,0 +1,291 @@
+*** Settings ***
+
+Resource	Keyword.txt
+
+*** Testcases ***
+Test Case 1, add a new class, wrong class name fomart, pass when page contain alert
+	Login
+	Select Classes
+	Select Add Class
+	Input class name	A
+	Select from listPhanban	KHXH
+	Wrong class name	Tên lớp bắt đầu bằng số và dấu cách, ví dụ 10 A, 10 B..
+	Button ADD Disabled
+
+Test Case 2, add a new class, wrong class name fomart, pass when page contain alert
+	Go To Add Class Page
+	Input class name	X
+	Select from listPhanban	KHXH
+	Wrong class name	Tên lớp bắt đầu bằng số và dấu cách, ví dụ 10 A, 10 B..
+	Button ADD Disabled
+
+Test Case 3, add a new class, wrong class name fomart, pass when page contain alert
+	Go To Add Class Page
+	Input class name	Z
+	Select from listPhanban	KHXH
+	Wrong class name	Tên lớp bắt đầu bằng số và dấu cách, ví dụ 10 A, 10 B..
+	Button ADD Disabled
+	
+	
+Test Case 4, add a new class, wrong class name fomart, pass when page contain alert
+	Go To Add Class Page
+	Input class name	@
+	Select from listPhanban	KHXH
+	Wrong class name	Tên lớp bắt đầu bằng số và dấu cách, ví dụ 10 A, 10 B..
+	Button ADD Disabled
+	
+Test Case 5, add a new class, wrong class name fomart, pass when page contain alert
+	Go To Add Class Page
+	Input class name	!
+	Select from listPhanban	KHXH
+	Wrong class name	Tên lớp bắt đầu bằng số và dấu cách, ví dụ 10 A, 10 B..
+	Button ADD Disabled
+
+Test Case 6, add a new class, wrong class name fomart, pass when page contain alert
+	Go To Add Class Page
+	Input class name	$
+	Select from listPhanban	KHXH
+	Wrong class name	Tên lớp bắt đầu bằng số và dấu cách, ví dụ 10 A, 10 B..
+	Button ADD Disabled
+	
+Test Case 7, add a new class, wrong class name fomart, pass when page contain alert
+	Go To Add Class Page
+	Input class name	a
+	Select from listPhanban	KHXH
+	Wrong class name	Tên lớp bắt đầu bằng số và dấu cách, ví dụ 10 A, 10 B..
+	Button ADD Disabled
+	
+Test Case 8, add a new class, wrong class name fomart, pass when page contain alert
+	Go To Add Class Page
+	Input class name	j
+	Select from listPhanban	KHXH
+	Wrong class name	Tên lớp bắt đầu bằng số và dấu cách, ví dụ 10 A, 10 B..
+	Button ADD Disabled
+	
+Test case 9, add a new class, wrong class name fomart , pass when page contain alert
+	Go To Add Class Page
+	Input class name	10A
+	Select from listPhanban		KHTN
+	Wrong class name	Tên lớp bắt đầu bằng số và dấu cách, ví dụ 10 A, 10 B..
+	
+Test case 10, add a new class, wrong class name fomart , pass when page contain alert
+	Go To Add Class Page
+	Input class name	10x
+	Select from listPhanban		KHTN
+	Wrong class name	Tên lớp bắt đầu bằng số và dấu cách, ví dụ 10 A, 10 B..
+
+Test case 11, add a new class, wrong class name fomart , pass when page contain alert
+	Go To Add Class Page
+	Input class name	10@
+	Select from listPhanban		KHTN
+	Wrong class name	Tên lớp bắt đầu bằng số và dấu cách, ví dụ 10 A, 10 B..
+	
+Test case 12, add a new class, wrong class name fomart , pass when page contain alert
+	Go To Add Class Page
+	Input class name	11!
+	Select from listPhanban		KHTN
+	Wrong class name	Tên lớp bắt đầu bằng số và dấu cách, ví dụ 10 A, 10 B..
+	
+Test case 13, add a new class, wrong class name fomart , pass when page contain alert
+	Go To Add Class Page
+	Input class name	12$
+	Select from listPhanban		KHTN
+	Wrong class name	Tên lớp bắt đầu bằng số và dấu cách, ví dụ 10 A, 10 B..
+	
+Test case 14, add a new class, wrong class name, pass when page contain alert
+	Go To Add Class Page
+	Input class name	13 A
+	Select from listPhanban		KHXH
+	Wrong class name	Lớp phải từ 10 đến 12
+
+Test case 15, add a new class, wrong class name, pass when page contain alert
+	Go To Add Class Page
+	Input class name	13A
+	Select from listPhanban		KHXH
+	Wrong class name	Lớp phải từ 10 đến 12
+	
+Test case 16, add a new class, wrong class name, pass when page contain alert
+	Go To Add Class Page
+	Input class name	9 A
+	Select from listPhanban		KHXH
+	Wrong class name	Lớp phải từ 10 đến 12
+	
+Test case 17, add a new class, wrong class name, pass when page contain alert
+	Go To Add Class Page
+	Input class name	9A
+	Select from listPhanban		KHXH
+	Wrong class name	Lớp phải từ 10 đến 12
+
+Test case 18, add a new class, wrong class name, pass when page contain alert
+	Go To Add Class Page
+	Input class name	0 A
+	Select from listPhanban		KHXH
+	Wrong class name	Lớp phải từ 10 đến 12
+	
+Test case 19, add a new class, wrong class name, pass when page contain alert
+	Go To Add Class Page
+	Input class name	0A
+	Select from listPhanban		KHXH
+	Wrong class name	Lớp phải từ 10 đến 12
+	
+Test case 20, add a new class, wrong class name, pass when page contain alert
+	Go To Add Class Page
+	Input class name	20 A
+	Select from listPhanban		KHXH
+	Wrong class name	Lớp phải từ 10 đến 12
+	
+Test case 21, add a new class, wrong class name, pass when page contain alert
+	Go To Add Class Page
+	Input class name	20A
+	Select from listPhanban		KHXH
+	Wrong class name	Lớp phải từ 10 đến 12
+		
+Test case 22, add a new class,class and teacher already existed, pass when page contain error
+	Go To Add Class Page
+	Input class name	10 A
+	Select from listPhanban		KHTN
+	Select from listGiaovien	3368
+	Click A Button	submit
+	Err duplicate ClassAndTeacher
+	
+Test case 23, add a new class, class and teacher already existed, pass when page contain error
+	Go To Add Class Page
+	Input class name	11 A
+	Select from listPhanban		KHTN
+	Select from listGiaovien	3365
+	Click A Button	submit
+	Err duplicate ClassAndTeacher
+	
+Test case 24, add a new class, class and teacher already existed, pass when page contain error
+	Go To Add Class Page
+	Input class name	12 B
+	Select from listPhanban		KHTN
+	Select from listGiaovien	3401
+	Click A Button	submit
+	Err duplicate ClassAndTeacher
+	
+Test case 25, add a new class, class name already existed, pass when page contain error
+	Go To Add Class Page
+	Input class name	10 A
+	Select from listPhanban		KHTN
+	Select from listGiaovien	3445
+	Click A Button	submit
+	Err duplicate Class
+	
+Test case 26, add a new class, class name already existed, pass when page contain error
+	Go To Add Class Page
+	Input class name	11 A
+	Select from listPhanban		KHTN
+	Select from listGiaovien	3445
+	Click A Button	submit
+	Err duplicate Class
+	
+Test case 27, add a new class, class name already existed, pass when page contain error
+	Go To Add Class Page
+	Input class name	12 A
+	Select from listPhanban		KHTN
+	Select from listGiaovien	3445
+	Click A Button	submit
+	Err duplicate Class
+	
+Test case 28, add a new class, teacher already existed, pass when page contain error
+	Go To Add Class Page
+	Input class name	10 X
+	Select from listPhanban		KHTN
+	Select from listGiaovien	3445
+	Click A Button	submit
+	Err teacher
+	
+Test case 29, add a new class, teacher already existed, pass when page contain error
+	Go To Add Class Page
+	Input class name	11 H
+	Select from listPhanban		KHTN
+	Select from listGiaovien	3445
+	Click A Button	submit
+	Err teacher
+	
+Test case 30, add a new class, teacher already existed, pass when page contain error
+	Go To Add Class Page
+	Input class name	12 F
+	Select from listPhanban		KHTN
+	Select from listGiaovien	3445
+	Click A Button	submit
+	Err teacher
+	
+Test case 31, click submit
+	Go To Add Class Page
+	Click A Button	submit
+	Location Be Addclass
+	
+Test case 32, add teacher and subject, click submit
+	Go To Add Class Page
+	Select from listPhanban		KHTN
+	Click A Button	submit
+	Location Be Addclass
+	
+Test case 33, add teacher, click submit
+	Go To Add Class Page
+	Select from listGiaovien	3368
+	Click A Button	submit
+	Location Be Addclass
+	
+Test case 34, add a new class
+	Go To Add Class Page
+	Input class name	10
+	Select from listPhanban		KHTN
+	Select from listGiaovien	3494
+	Click A Button	submit
+	Create is Successful
+	
+Test case 35, add a new class
+	Go To Add Class Page
+	Input class name	11 E
+	Select from listPhanban		KHTN
+	Select from listGiaovien	3446
+	Click A Button	submit
+	Create is Successful
+
+Test case 36, add a new class
+	Go To Add Class Page
+	Input class name	10 x
+	Select from listPhanban		KHTN
+	Select from listGiaovien	3452
+	Click A Button	submit
+	Create is Successful
+
+Test case 37, add a new class
+	Go To Add Class Page
+	Input class name	12 2
+	Select from listPhanban		KHTN
+	Select from listGiaovien	3495
+	Click A Button	submit
+	Create is Successful
+	
+Test case 38, delete a class
+	Go To Classes Page
+	Click deleteClass	3494
+	ok
+	Reload Page
+	Delete Class Successful	3494
+	
+Test case 39, delete a class
+	Go To Classes Page
+	Click deleteClass	3446
+	ok
+	Reload Page
+	Delete Class Successful	3446
+
+Test case 40, delete a class
+	Go To Classes Page
+	Click deleteClass	3452
+	ok
+	Reload Page
+	Delete Class Successful		3452
+	
+Test case 41, delete a class
+	Go To Classes Page
+	Click deleteClass	3495
+	ok
+	Reload Page
+	Delete Class Successful	3495
+	Close Browser

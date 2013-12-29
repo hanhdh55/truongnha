@@ -1,0 +1,145 @@
+
+*** Settings ***
+
+Resource	Keyword.txt
+
+*** Testcases ***
+Login Should Succeed When the Correct Username and Password are Entered
+	Login
+
+Test Case 1, Nhap diem danh la P
+	Select An Class
+	Select Rollup
+	Enter Rollup1	P	P
+
+Test Case 2, Nhap diem danh la p
+
+	Enter Rollup2	p	P
+
+Test Case 3, Nhap diem danh la K
+
+	Enter Rollup3	K	K
+
+Test Case 4, Nhap diem danh la k
+
+	Enter Rollup4	k	K
+
+Test Case 5, Nhap diem danh la M
+
+	Enter Rollup5	m	M
+
+Test Case 6, Nhap diem danh la a
+
+	Enter Rollup6	a	\
+
+Test Case 7, Nhap diem danh la aa
+	
+	Enter Rollup7	aa	\
+
+Test Case 8, Nhap diem danh la 1
+
+	Enter Rollup8	1	\
+
+Test Case 9, Nhap diem danh la P vao hoc sinh da duoc diem danh
+
+	Enter Rollup3	P	P
+
+Test Case 10, Nhap diem danh la so 11
+	
+	Enter Rollup	11	\
+
+Test Case 11,Nhap diem danh la ki tu dac biet *
+
+	Enter Rollup	*	\
+
+Test Case 12, Nhap diem danh la 2 ki tu dac biet **
+
+	Enter Rollup	**	\
+
+
+Test Case 13, Nhap diem danh voi dinh danh aM
+
+	Enter Rollup	aM	M
+
+Test Case 14,Nhap diem danh voi dinh dang aP
+
+	Enter Rollup	aP	P
+
+Test Case 15a,Nhap diem danh voi dinh dang aK
+
+	Enter Rollup	aK	K
+
+Test Case 15b,Nhap diem danh voi dinh dang am
+	
+	Enter Rollup	am	M
+
+Test Case 16, Nhap diem danh voi dinh dang Pa
+
+	Enter Rollup	Pa	P
+
+Test Case 17, Nhap diem danh voi dinh dang Ma
+
+	Enter Rollup	Ma	M
+
+Test Case 18, Nhap diem danh voi dinh danh Ka
+
+	Enter Rollup	Ka	K
+
+Test Case 19, Nhap dau +
+
+	Enter Rollup	+	\
+
+Test Case 20, Nhap diem danh la ki tu G
+
+	Enter Rollup	G	\
+Test Case 21, Nhap diem danh voi so dung truoc 1P
+
+	Enter Rollup	1P	P
+Test Case 22, Nhap diem danh voi so dung truoc 1M
+
+	Enter Rollup	1M	M
+Test Case 23, Nhap diem danh voi so dung truoc 1K
+	
+	Enter Rollup	1K	K
+
+Test Case 24, Nhap diem danh voi so dung truoc 1m
+
+	Enter Rollup	1m	M
+Test Case 25, Nhap diem danh voi so dung truoc 1a
+
+	Enter Rollup	1a	\
+
+Test Case 26, Nhap diem danh voi so dung sau P1
+
+	Enter Rollup	P1	P
+Test Case 27, Nhap diem danh voi so dung sau m1
+
+	Enter Rollup	m1	M
+Test Case 28,Nhap diem danh voi so dung sau k1
+
+	Enter Rollup	k1	K
+Test Case 29, Nhap diem danh voi ki tu !
+
+	Enter Rollup	!	\
+
+Test Case 30,Nhap diem danh voi ki tu >
+
+	Enter Rollup	>	\
+
+Test Case 31, Nhap diem danh voi ki tu )
+
+	Enter Rollup	)	\
+
+Test Case 32, Nhap diem danh voi 2 chu cai in hoa KP
+
+	Enter Rollup	KP	K
+
+Test Case 33,Nhap diem danh voi 2 chu cai in hoa KM
+
+	Enter Rollup	KM	K
+Test Case 34, Nhap diem danh voi 2 chu cai in hoa KK
+
+	Enter Rollup	KK	K
+
+Exit
+	Exit

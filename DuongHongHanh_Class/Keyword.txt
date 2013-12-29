@@ -1,0 +1,100 @@
+*** Settings ***
+Library       		Selenium2Library
+
+
+*** Variables ***
+${LOGIN ADDRESS}	http://truongnha.com/login/
+${BROWSER}			ff
+${HOST}				http://truongnha.com
+${WELCOME PAGE}		${HOST}/school/
+${CLASSES PAGE}		${HOST}/school/classes
+${ADD CLASSES PAGE}	${HOST}/school/addclass
+
+*** Keywords ***
+
+Click A Button	[Arguments]  ${button}
+	Click Button	${button}
+
+Click A Link	[Arguments]  ${link}
+	Click Link	${link}
+	
+Login
+	Open Browser  ${LOGIN ADDRESS}  ${BROWSER}
+	Maximize Browser Window
+	Input Text  id_username		mokey.d.luffy
+	Input Text  id_password	@urmant969
+	Click Button  login
+	Location Should Be 	${WELCOME PAGE}
+
+Location Be Addclass
+	Location Should Be	${ADD CLASSES PAGE}
+	
+Go To Home Page
+	Go To	${WELCOME PAGE}
+
+Go To Classes Page
+	Go To	${CLASSES PAGE}
+
+Go To Add Class Page
+	Go To	${ADD CLASSES PAGE}
+	
+Select Classes
+	Click Link 	classes-teachers
+	Location Should Be	${CLASSES PAGE}
+	
+Select Add Class
+	Click Link 	/school/addclass
+	Location Should Be	${ADD CLASSES PAGE}
+
+Input class name	[Arguments]  ${username}
+	Input Text	id_name		${username}
+
+Input teacher name	[Arguments]  ${idclass}	${name}
+	Input Text	xpath=//tr[contains(@id,'${idclass}')]/td/input		${name}
+	
+Wrong class name	[Arguments] 	${text}
+	Alert Should Be Present	${text}
+	
+
+Select from listPhanban		[Arguments] 	${ban}
+	Select From List	id_phan_ban		${ban}
+	
+		
+Select from listGiaovien	[Arguments] 	${id}
+	Select From List	id_teacher_id	${id}
+	
+	
+Select from listGiaovien1	[Arguments] 	${idclass}	${idteacher}
+	Select From List	${idclass}		${idteacher}
+	
+	
+Err duplicate ClassAndTeacher
+	Page Should Contain Element		xpath=//ul[contains(@class,'errorlist')]/li[text()='Lớp có Năm học(*) và Tên lớp(*) đã tồn tại.']
+	Page Should Contain Element		xpath=//ul[contains(@class,'errorlist')]/li[text()='Giáo viên đã có lớp chủ nhiệm.']
+	
+Err duplicate Class
+	Page Should Contain Element		xpath=//ul[contains(@class,'errorlist')]/li[text()='Lớp có Năm học(*) và Tên lớp(*) đã tồn tại.']
+
+Err teacher
+	Page Should Contain Element		xpath=//ul[contains(@class,'errorlist')]/li[text()='Giáo viên đã có lớp chủ nhiệm.']
+
+Create is Successful
+	Location Should Be 	${CLASSES PAGE}	
+
+Button ADD Disabled
+	Element Should Be Disabled	submit
+	
+
+
+Click deleteClass	[Arguments]	${id}
+	Click Element	xpath=//tr[contains(@teacher,${id})]/td/span[contains(@class,'class-delete')]
+
+ok	
+	Confirm Action
+
+Delete Class Successful	[Arguments]	${id}
+	Page Should Not Contain Element		xpath=//tr[contains(@teacher,${id})]
+	
+
+	
+Click export

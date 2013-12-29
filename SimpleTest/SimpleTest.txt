@@ -1,0 +1,13 @@
+*** Settings ***
+
+Library       		Selenium2Library
+
+*** Testcases ***
+Login Should Succeed When the Correct Username and Password are Entered
+	Open Browser  http://truongnha.com/login/  ff
+	Maximize Browser Window
+	Input Text  id_username	mokey.d.luffy
+	Input Text  id_password	@urmant969
+	Click Button  login
+	Location Should Be 	http://truongnha.com/school/
+	

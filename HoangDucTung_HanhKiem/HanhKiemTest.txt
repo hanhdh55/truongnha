@@ -1,0 +1,209 @@
+*** Settings ***
+
+Resource	Keyword.txt
+
+*** Testcases ***
+Login Should Succeed When the Correct Username and Password are Entered
+	Login
+
+Test Case 1: Lop 10A, nhap hanh kiem la T, gia tri mong muon la T
+	Go To Home Page
+	Select Classes Teachers
+	Select An Class 	1434
+	Select Dissolute 	1434
+	Enter Dissolute		27818	col1	T
+	Click Other Position To Save 	27818 	hk1
+	Compare Values 		27818	col1	T
+
+
+Test Case 2: Lop 10A, nhap hanh kiem la t, gia tri mong muon la T
+	Go To dissolutePage 	1434
+	Enter Dissolute		27818	col2	t
+	Click Other Position To Save 	27818 	hk1	
+	Compare Values 		27818	col2	T
+
+Test Case 3: Lop 10A, nhap hanh kiem la K, gia tri mong muon la K
+	Go To dissolutePage 	1434
+	Enter Dissolute		27818	col3	K
+	Click Other Position To Save 	27818 	hk1
+	Compare Values 		27818	col3	K
+
+Test Case 4: Lop 10A, nhap hanh kiem la k, gia tri mong muon la K
+	Go To dissolutePage 	1434
+	Enter Dissolute		27818	col4	k
+	Click Other Position To Save 	27818 	hk1
+	Compare Values 		27818	col4	K
+
+Test Case 5: Lop 10A, nhap hanh kiem la B, gia tri mong muon la TB
+	Go To dissolutePage	1434
+	Enter Dissolute		27818	col5	B
+	Click Other Position To Save 	27818 	hk1	
+	Compare Values 		27818	col5	TB
+
+Test Case 6: Lop 10A, nhap hanh kiem la b, gia tri mong muon la TB
+	Go To dissolutePage 	1434
+	Enter Dissolute		27818	col6	b
+	Click Other Position To Save 	27818 	hk1
+	Compare Values 		27818	col6	TB
+
+Test Case 7: Lop 10A, nhap hanh kiem la Y, gia tri mong muon la Y
+	Go To dissolutePage 	1434
+	Enter Dissolute		27818	col7	Y
+	Click Other Position To Save 	27818 	hk1
+	Compare Values 		27818	col7	Y
+
+Test Case 8: Lop 10A, nhap hanh kiem la y, gia tri mong muon la Y
+	Go To dissolutePage 	1434
+	Enter Dissolute		27818	col8	y
+	Click Other Position To Save 	27818 	hk1
+	Compare Values 		27818	col8	Y
+
+Test Case 9: Lop 10A, nhap hanh kiem la a(khong hop le), gia tri mong muon la rong
+	Go To dissolutePage 	1434
+	Enter Dissolute		27819	col1	a
+	Click Other Position To Save 	27819 	hk1
+	Compare Values 		27819	col1	\
+
+Test Case 10: Lop 10A, nhap hanh kiem la x(khong hop le), gia tri mong muon la rong
+	Go To dissolutePage		1434
+	Enter Dissolute		27819	col2	x
+	Click Other Position To Save 	27819 	hk1
+	Compare Values 		27819	col2	\
+
+Test Case 11: Lop 10A, nhap hanh kiem la m(khong hop le), gia tri mong muon la rong
+	Go To dissolutePage 	1434
+	Enter Dissolute		27819	col2	m
+	Click Other Position To Save 	27819 	hk1	
+	Compare Values 		27819	col2	\
+
+Test Case 12: Lop 10A, nhap hanh kiem la 1(khong hop le), gia tri mong muon la rong
+	Go To dissolutePage 	1434
+	Enter Dissolute		27819	col3	1
+	Click Other Position To Save 	27819 	hk1
+	Compare Values 		27819	col3	\
+
+Test Case 13: Lop 10A, nhap hanh kiem la ac(khong hop le), gia tri mong muon la rong
+	Go To dissolutePage 	1434
+	Enter Dissolute		27819	col4	ac
+	Click Other Position To Save 	27818 	hk1
+	Compare Values 		27819	col4	\
+
+Test Case 14: Lop 10A, nhap hanh kiem la 2a(khong hop le), gia tri mong muon la rong
+	Go To dissolutePage		1434
+	Enter Dissolute		27819	col5	2a
+	Click Other Position To Save 	27818 	hk1
+	Compare Values 		27819	col5	\
+
+Test Case 15: Lop 10A, nhap hanh kiem la ^, gia tri mong muon la rong
+	Go To dissolutePage 	1434
+	Enter Dissolute		27819	col6	^
+	Click Other Position To Save 	27818 	hk1
+	Compare Values 		27819	col6	\
+
+Test Case 16: Lop 10A, nhap hanh kiem la T vao o da co hanh kiem truoc, gia tri mong muon la gia tri T(nhap sau - cap nhat)
+	Go To dissolutePage 	1434
+	Enter Dissolute		27818	col2	T
+	Click Other Position To Save 	27818 	hk1
+	Compare Values 		27818	col2	T
+
+Test Case 17: Lop 10A, nhap hanh kiem la TB, gia tri nhan duoc la T, nhan gia tri nhap truoc
+	Go To dissolutePage 	1434
+	Enter Dissolute		27819	col7	TB
+	Click Other Position To Save 	27818 	hk1
+	Compare Values 		27819	col7	T
+
+Test Case 18: Lop 10A, nhap hanh kiem la aab, gia tri nhan duoc la TB, gom 2 ki tu duoc phep nhap, gia tri mong muon TB
+	Go To dissolutePage 	1434
+	Enter Dissolute		27819	col6	aab
+	Click Other Position To Save 	27818 	hk1
+	Compare Values 		27819	col6	TB
+
+Test Case 19: Lop 11B, nhap hanh kiem la T, gia tri mong muon la T
+	Go To dissolutePage 	1438
+	Enter Dissolute		27614	col1	T
+	Click Other Position To Save 	27614 	hk1
+	Compare Values 		27614	col1	T
+
+Test Case 20: Lop 11B, nhap hanh kiem la y, gia tri mong muon la Y
+	Go To dissolutePage		1438
+	Enter Dissolute		27614	col2	y
+	Click Other Position To Save 	27614 	hk1
+	Compare Values 		27614	col2	Y
+
+Test Case 21: Lop 11B, nhap hanh kiem la tb, gia tri mong muon la T
+	Go To dissolutePage		1438
+	Enter Dissolute		27614	hk1		tb
+	Click Other Position To Save 	27614 	hk1
+	Compare Values 		27614	hk1		T
+
+Test Case 22: Lop 11B, nhap hanh kiem cac thang 9 10 11 12 la y, nhap hanh kiem hoc ki 1 la T
+	Go To dissolutePage		1438
+	Enter Dissolute		27617	col1	y
+	Enter Dissolute 	27617 	col2	y
+	Enter Dissolute 	27617 	col3 	y
+	Enter Dissolute 	27617 	col4 	y
+	Enter Dissolute 	27617 	hk1		T
+	Click Other Position To Save 	27614 	hk1
+	Compare Values 		27617	col1	Y
+	Compare Values 		27617	col2	Y
+	Compare Values 		27617	col3	Y
+	Compare Values 		27617	col4	Y
+	Compare Values 		27617	hk1		T
+
+Test Case 23: Chon hanh kiem lop 12C (id=1442) bang dropdown list
+	Go To Home Page
+	Select Classes Teachers
+	Select An Class 	1438
+	Select Dissolute 	1438
+	Select From idClass 	1442
+	New Location  	1442
+
+Test Case 24: Chon hanh kiem lop 11B (id=1438) bang dropdown list
+	Go To dissolutePage 	1434
+	Select From idClass 	1438
+	New Location 	1438
+
+Test Case 25: Chon hanh kiem lop 10A (id=1434), bang cach di tu trang chu
+	Go To Home Page
+	Select Classes Teachers
+	Select An Class 	1434
+	Select Dissolute 	1434
+	New Location 	1434
+
+Test Case 26: Xoa hanh kiem da nhap truoc
+	Go To dissolutePage 	1434
+	Delete Entered Dissolute 	27819 	col4
+	Compare Values 		27819	col5	\
+
+Test Case 27: Xoa nhieu hanh kiem da nhap truoc
+	Go To dissolutePage		1434
+	Delete Entered Dissolute 	27819 	 col5
+	Delete Entered Dissolute 	27819 	 col6
+	Delete Entered Dissolute 	27819 	 col7
+	Delete Entered Dissolute 	27819 	 col8
+	Click Other Position To Save 	27819 	hk1
+	Compare Values 		27819 	col5 	\
+	Compare Values 		27819 	col6 	\
+	Compare Values 		27819 	col7 	\
+	Compare Values 		27819 	col8 	\
+
+Test Case 28: Nhap hanh kiem vao o roi go enter
+	Go To dissolutePage 	1434
+	Enter Dissolute 	27820 	 col5 	T
+	Press Key	 xpath=//tr[contains(@class,"27820")]/td[contains(@class,"col5")] 	\13
+	Compare Values 		27820 	col5	T
+
+Test Case 29: Nhap hanh kiem vao o roi tai lai trang
+	Go To dissolutePage 	1434
+	Enter Dissolute 	27820 	 col6 	K
+	Reload Current Page
+	Compare Values 		27820 	col6	K
+
+Test Case 30: Nhap hanh kiem vao o roi an nut luu
+	Go To dissolutePage 	1434
+	Enter Dissolute 	27820 	 col7 	Y
+	Click Button Save
+	Compare Values 		27820 	col7	Y	
+
+Exit
+	Exit Browser
